@@ -30,6 +30,7 @@ Payment_Method {
 	int bank_id PK
 	string nama_bank
 	string kode_bank
+	string no_rek
 }
 
 Isi_Saldo {
