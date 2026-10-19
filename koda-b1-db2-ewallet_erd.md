@@ -6,12 +6,12 @@ erDiagram
 
 User ||--|| Wallet: Has
 User ||--|{ Transaction: Do
-Wallet ||--|{ Isi_Saldo: Contains
-Isi_Saldo }|--|| Payment_Method: Contains
+Wallet ||--|{ Topup: Contains
+Topup }|--|| Payment_Method: Contains
 
 User {
 	int user_id PK
-	string nama
+	string name
 	string telp
 	string address
 	string email
@@ -22,22 +22,22 @@ User {
 
 Wallet {
 	int wallet_id PK
-	decimal saldo
+	decimal ballance
 	int user_id FK
 }
 
 Payment_Method {
 	int bank_id PK
-	string nama_bank
-	string kode_bank
+	string name_bank
+	string code_bank
 	string no_rek
 }
 
-Isi_Saldo {
-	int isi_saldo PK
-	decimal jumlah
-	date tgl_isi_saldo
-	string status_isi_saldo
+Topup {
+	int topup PK
+	decimal ballance
+	date date_topup
+	string status_topup
 	int wallet_id FK
 	int bank_id FK
 }
@@ -45,8 +45,8 @@ Isi_Saldo {
 Transaction {
 	int transaction_id PK
 	int user_id FK
-	decimal jumlah_transaction
-	date tgl_transaction
+	decimal balance_transaction
+	date date_transaction
 	string status_transaction
 }
 
