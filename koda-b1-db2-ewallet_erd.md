@@ -5,9 +5,9 @@ title: Entitiy Relationship Diagram E-Wallet
 erDiagram
 
 User ||--|| Wallet: Has
-User ||--}| Transaction: Do
-Wallet ||--}| Isi_Saldo: Contains
-Isi_Saldo ||--|| Payment_Method: Contains
+User ||--|{ Transaction: Do
+Wallet ||--|{ Isi_Saldo: Contains
+Isi_Saldo }|--|| Payment_Method: Contains
 
 User {
 	int user_id PK
