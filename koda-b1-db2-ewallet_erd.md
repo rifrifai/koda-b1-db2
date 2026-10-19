@@ -1,4 +1,7 @@
 ```mermaid
+---
+title: Entitiy Relationship Diagram E-Wallet
+---
 erDiagram
 
 User ||--|| Wallet: Has
